@@ -1,21 +1,21 @@
-import React from 'react';
-import "./Picture.css";
+import React, {useState, useEffect} from 'react';
 import Axios from 'axios';
 
+import "./Picture.css";
+
 const Picture = () => {
-Axios.get('https://api.nasa.gov/planetary/apod?api_key=hI7mvMrtmts3yLRICMpu41ASYPcS8rrPGgFYc2Qw')
-    .then(response => {
-        console.log(response.data);
-        let ret = <img src={response.data.url}/>;
-})
-    .catch(error => {
-        console.log("Error from Info.js: " + error);
-});
-    // return (
-    //     // <img src={nasaData.data.url}/>
-    //     <div></div>
-    // )
-    return ret;
+    const [spacePic, setSpacePic] = useState("");
+    
+    useEffect(() => {
+    Axios
+        .get("https://api.nasa.gov/planetary/apod?api_key=hI7mvMrtmts3yLRICMpu41ASYPcS8rrPGgFYc2Qw&date")
+        .then(res => { setSpacePic(res.data.url)})
+        .catch(err => {console.log(err);});
+    }, []);
+    console.log(spacePic);
+    return (
+        <img src={spacePic}/>
+    )
 }
 
 export default Picture;
