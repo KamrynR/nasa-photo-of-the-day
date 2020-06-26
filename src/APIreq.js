@@ -15,16 +15,9 @@ const APIreq = () => {
     }, []);
     console.log(spaceInfo);
     
-    let myFont = `'Playfair Display', serif`;
-    const cardStyle = {
-        color: 'white',
-        backgroundColor: '#273c75',
-        fontSize: '1rem',
-        fontFamily: myFont}
-
     return(
-        <div className="card">
-            <Card style={cardStyle}>
+        <div className="cardMain">
+            <Card>
                 <Picture
                     url={spaceInfo.url}/> 
                 <CardBody>

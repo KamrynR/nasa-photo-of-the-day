@@ -1,5 +1,4 @@
-import React, {useState, useEffect} from 'react';
-import "./Picture.css";
+import React from 'react';
 
 const Picture = ({url}) => {
     return (

@@ -16,7 +16,9 @@ function App() {
           <p>Astronomy Picture of the Day</p>
         </div>
       </header>
-      <APIreq/>
+      <div className="cardHolder">
+        <APIreq/>
+      </div>
     </div>
   );
 }
