@@ -41,3 +41,9 @@
 .headerImg {
   width: 50%;
 }
+
+header {
+  color: white;
+  font-size: 3rem;
+  font-family: 'Playfair Display', serif;
+}

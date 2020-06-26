@@ -1,23 +1,12 @@
-import React, {useState, useEffect} from 'react';
-import Axios from 'axios';
-
+import React from 'react';
 import "./Info.css";
 
-const Info = () => {
-    const [spaceInfo, setSpaceInfo] = useState("");
-
-    useEffect(() => {
-    Axios
-        .get("https://api.nasa.gov/planetary/apod?api_key=hI7mvMrtmts3yLRICMpu41ASYPcS8rrPGgFYc2Qw&date")
-        .then(res => { setSpaceInfo(res.data);})
-        .catch(err => {console.log(err);});
-    }, []);
-    console.log(spaceInfo);
+const Info = ({title, date, explanation}) => {
     return (
         <div>
-            <p>title: {spaceInfo.title}</p>
-            <p>date: {spaceInfo.date}</p>
-            <p>explanation: {spaceInfo.explanation}</p>
+            <p style={{fontSize: '2.4rem'}}><cite>{title}</cite></p>
+            <p><b>Date Taken: </b><br/>{date}</p>
+            <p><b>About This Image: </b><br/>{explanation}</p>
         </div>
     )
 }
