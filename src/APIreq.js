@@ -9,7 +9,7 @@ const APIreq = () => {
 
     useEffect(() => {
     Axios
-        .get("https://api.nasa.gov/planetary/apod?api_key=hI7mvMrtmts3yLRICMpu41ASYPcS8rrPGgFYc2Qw&date")
+        .get(`${process.env.REACT_APP_API}`)
         .then(res => { setSpaceInfo(res.data);})
         .catch(err => {console.log(err);});
     }, []);
