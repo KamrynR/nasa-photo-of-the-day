@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #192a56;
 }
 
 .App-logo {
@@ -35,4 +36,53 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.headerImg {
+  width: 50%;
+  height: auto;
+}
+
+header {
+  padding-top: 2%;
+  color: white;
+  font-size: 3rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.cardHolder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardMain {
+  width: 80%;
+  margin-bottom: 10%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.infoCont {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: start;
+}
+
+.infoCont p:first-child {
+  font-size: 2.4rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.card {
+  color: white;
+  background-color: #273c75;
+  font-size: 1rem;
 }
